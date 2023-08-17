@@ -1,6 +1,6 @@
 ---
 layout: layouts/page.vto
-title: About Me
+title: Me
 menu:
   visible: true
   order: 2
