@@ -1,13 +1,15 @@
+lang: en
+
 home:
-  welcome: Halo kawan, mari menjelajah.
+  welcome: Hello, I am a person that writes stuff.
 
 menu_links: []
 
 # Metas plugin https://lume.land/plugins/metas/#description
 metas:
-  site: Personal
-  description: Berisi Portofolio dan Blog
+  site: Blog name
+  description: General description of the blog
   title: "=title"
   image: "=image"
-  twitter: "@affan_yunas"
-  lang: id
+  twitter: "@username"
+  lang: en
