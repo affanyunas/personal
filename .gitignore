@@ -1,4 +1,6 @@
-posts/*.md
-_site
-_bin
-deno.lock
+deps/
+npm/
+gen/
+registries/
+.DS_Store
+dep_analysis_cache*

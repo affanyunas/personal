@@ -1,37 +1,52 @@
-# Simple Blog
+<p align="center">
+  <img src="assets/gh-banner.png" alt="Fresh Blog Banner">
+</p>
 
-[Lume](https://lume.land) theme to create a simple blog.
+<br/>
+<div align="center">
+  <a href="https://twitter.com/littlesticksdev">
+  <img src="assets/twitter-badge.svg" alt="Follow Little Sticks on Twitter"/>
+</a>
+  <a href="https://littlesticks.lemonsqueezy.com/checkout/buy/ae636a97-0b45-4285-8250-41651a104b72">
+    <img src="assets/sponsor-badge.svg" alt="Sponsor This Repo" />
+  </a>
+  <a href="https://littlesticks.dev/discord">
+    <img src="assets/discord-badge.svg" alt="Join our Discord" />
+  </a>
+  
+</div>
+<br/>
 
-- It supports tags and post authors.
-- RSS (Atom and JSON).
-- Sitemap and SEO features.
-- Instant search engine.
+# Fresh Blog
 
-## Install as a remote theme
+[![Made with Fresh](https://fresh.deno.dev/fresh-badge-dark.svg)](https://fresh.deno.dev)
 
-The **fastest and easiest** way to use this theme is by importing it as a remote
-module. It allows to create a blog in seconds and update it at any time just by
-changing the version number in the import URL. Just add the following code to
-your `_config.ts` file:
+This is a minimal blog template using the awesome framework [Fresh](https://fresh.deno.dev) from Deno.
 
-```ts
-import lume from "lume/mod.ts";
-import blog from "https://deno.land/x/lume_theme_simple_blog@v0.10.2/mod.ts";
+## Usage
 
-const site = lume();
+### Start the project:
 
-site.use(blog());
-
-export default site;
+```
+deno task start
 ```
 
-You can see an example in the [demo](./demo) folder. To customize it copy the
-[`_data.yml`](./src/_data.yml) file in your blog root folder and edit it with
-your data. The posts must be saved in the `posts` folder. For example
-`posts/`my-first-posts.md`.
+This will watch the project directory and restart as necessary.
 
-## Use it as a base template
+### Make it your own
 
-To use this theme as a base template for a more customized blog, clone this repo
-and edit the [_config.ts](./_config.ts) file. The source files are in the
-[src](./src/) folder. And you can remove the `/demo` folder.
+To update the global site title, description, etc. edit the `data/site.ts` file.
+
+To add new posts, create a new markdown file in the `data/posts` directory.
+
+## Sponsor
+
+If you find this template useful, please consider donating to support the continued development of it with the link below
+
+[Donate to Fresh Blog](https://littlesticks.lemonsqueezy.com/checkout/buy/ae636a97-0b45-4285-8250-41651a104b72)
+
+## Support
+
+Please feel free to reach out to us on our Discord if you have questions or file an issue on the repo.
+
+[Join Little Sticks Discord](https://littlesticks.dev/discord)
