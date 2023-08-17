@@ -1,4 +1,4 @@
-name: Build demo
+name: Publish on Deno Deploy
 
 on:
   push:
@@ -7,23 +7,25 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
 
     steps:
-      - uses: actions/checkout@v2
+      - name: Clone repository
+        uses: actions/checkout@v2
 
       - name: Setup Deno environment
         uses: denoland/setup-deno@v1
         with:
           deno-version: v1.x
 
-      - name: Build the demo site
-        run: |
-          cd demo
-          deno task build --location=https://lumeland.github.io/theme-simple-blog
+      - name: Build site
+        run: deno task build
 
-      - name: Deploy
-        uses: crazy-max/ghaction-github-pages@v2.0.1
+      - name: Deploy to Deno Deploy
+        uses: denoland/deployctl@v1
         with:
-          build_dir: demo/_site
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          project: personal
+          import-map: "./import_map.json"
+          entrypoint: serve.ts
